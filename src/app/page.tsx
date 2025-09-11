@@ -250,13 +250,21 @@ const AlturaCreativaWebsite = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <div className="flex items-center space-x-3 cursor-pointer" onClick={() => scrollToSection('inicio')}>
-              <div className="w-10 h-10 bg-gradient-to-r from-[#EA526F] to-[#d63d5a] rounded-xl flex items-center justify-center shadow-lg">
-                <span className="text-white font-bold text-sm">AC</span>
+            <div
+              className="flex items-center space-x-3 cursor-pointer"
+              onClick={() => scrollToSection('inicio')}
+            >
+              <div className="w-10 h-10 rounded-xl flex items-center justify-center shadow-lg overflow-hidden">
+                <img
+                  src="/logo.png" // <- empieza con "/" y apunta a /public
+                  alt="Altura Creativa Logo"
+                  className="w-full h-full object-contain"
+                />
               </div>
-              <span className="text-xl font-bold text-[#070600] hidden sm:block">Estudio Altura Creativa</span>
+              <span className="text-xl font-bold text-[#070600] hidden sm:block">
+                Estudio Altura Creativa
+              </span>
             </div>
-
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center space-x-8">
               {['inicio', 'servicios', 'precios', 'testimonios', 'contacto'].map((section) => (
@@ -915,9 +923,13 @@ const AlturaCreativaWebsite = () => {
           <div className="grid md:grid-cols-4 gap-8">
             <div className="md:col-span-2 space-y-6">
               <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 bg-gradient-to-r from-[#EA526F] to-[#d63d5a] rounded-xl flex items-center justify-center shadow-lg">
-                  <span className="text-white font-bold text-lg">AC</span>
-                </div>
+                <div className="w-10 h-10 rounded-xl flex items-center justify-center shadow-lg overflow-hidden">
+                <img
+                  src="/logo.png" // <- empieza con "/" y apunta a /public
+                  alt="Altura Creativa Logo"
+                  className="w-full h-full object-contain"
+                />
+              </div>
                 <span className="text-2xl font-bold">Altura Creativa</span>
               </div>
               <p className="text-gray-400 leading-relaxed max-w-md">
